@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- Wurzelelement: der HTML-Block -->
+<html lang="de">
+
+<!-- Header-Block: enthält die sog. Meta-Informationen sowie CSS Styles -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rezeptbuch Cocktails</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+</head>
+
+<!-- Body-Block: enthält die eigentlichen Inhalte einer Website:
+    - Ihre Struktur und den eigentlichen Inhalt, die sogenannte "Semantik", im HTML-Block
+    - Dynamische oder Interaktive Funktionen im Script-Block -->
+
+<body>
+
+    <div class="rezeptblock">
+
+
+        <div class="rezeptwahl">
+            <input id="citrus" type="radio" name="rezeptwahl" value="citrus" checked>
+            <label>Citrus Sunrise</label>
+
+            <input id="cucumber" type="radio" name="rezeptwahl" value="cucumber">
+            <label>Cucumber Mint Cooler</label>
+
+            <input id="berry" type="radio" name="rezeptwahl" value="berry">
+            <label>Berry Coconut Dream</label>
+
+
+        </div>
+
+        <input id="portionen" type="number">
+        <label>Anzahl Portionen</label>
+        <br>
+        <button onclick="berechnen()">Berechnen</button>
+
+        <div class="rezept versteckt citrus">
+
+            <h1>Citrus Sunrise </h1>
+            <h2>Einleitung </h2>
+            <p>Der „Citrus Sunrise“ ist ein spritziger, farbenfroher Mocktail, der süße Maracuja mit frischer Orange und
+                einer feinen Herbe von Tonic Water kombiniert. Durch den langsam eingegossenen Grenadinesirup entsteht
+                der
+                klassische, eindrucksvolle Farbverlauf. </p>
+
+
+            <h2>Zutatenliste </h2>
+            <ul>
+                <li><data value="100">100</data> ml Orangensaft (frisch gepresst) </li>
+                <li><data value="60">60</data> ml Maracujanektar </li>
+                <li><data value="80">80</data> ml Tonic Water </li>
+                <li><data value="15">15</data> ml Grenadinesirup </li>
+                <li><data value="5">5</data> - <data value="6">6</data>Eiswürfel </li>
+                <li><data value="1">1</data> Bio-Orangenscheibe (zur Dekoration) </li>
+            </ul>
+
+
+            <h2>Zubereitung </h2>
+            <ol>
+                <li>Das Highball-Glas bis zur Hälfte mit Eiswürfeln füllen. </li>
+                <li>Orangensaft und Maracujanektar im Glas miteinander verrühren. </li>80
+                <li>Vorsichtig mit Tonic Water auffüllen. </li>
+                <li>Den Grenadinesirup langsam über den Rücken eines Löffels an der Innenseite des Glases hinabgleiten
+                    lassen, sodass er sich am Boden absetzt. </li>
+                <li>Vor dem Servieren nicht mehr umrühren und mit der Orangenscheibe am Glasrand garnieren. </li>
+            </ol>
+
+        </div>
+
+        <div class="rezept versteckt cucumber">
+
+            <h1>Cucumber Mint Cooler</h1>
+            <h2>Einleitung</h2>
+            <p>Eine alkoholfreie Neuinterpretation des Klassikers: Der „Cucumber Mint Cooler“ setzt voll auf Frische.
+                Die
+                Kombination aus Gurke, Limette und Minze wirkt extrem erfrischend und wird durch Ginger Ale mit einer
+                angenehmen Würze abgerundet.</p>
+
+
+
+            <h2>Zutatenliste</h2>
+            <ul>
+                <li><data value="4">4</data>–<data value="5">5</data> Scheiben frische Saladengurke</li>
+                <li><data value="6">6</data>–<data value="8">8</data> frische Minzblätter</li>
+                <li><data value="25">25</data> ml Limettensaft (frisch gepresst)</li>
+                <li><data value="20">20</data> ml Rohrzuckersirup</li>
+                <li><data value="120">120</data> ml Ginger Ale</li>
+                <li>Crushed Ice</li>
+
+            </ul>
+
+            <h2>Zubereitung</h2>
+
+            <ol>
+                <li>Gurkenscheiben, Minzblätter, Limettensaft und Rohrzuckersirup in ein stabiles Glas geben.</li>
+                <li>Die Zutaten mit einem Barlöffel oder Mörser leicht andrücken, um die Aromen freizusetzen.</li>
+                <li>Das Glas zu zwei Dritteln mit Crushed Ice füllen.</li>
+                <li>Mit Ginger Ale auffüllen und mit einem langen Löffel vorsichtig von unten nach oben durchmischen.
+                </li>
+                <li>Mit einem kleinen Minzzweig oder einer Gurkenscheibe garnieren.</li>
+            </ol>
+        </div>
+
+
+        <div class="rezept versteckt berry">
+            <h1>Berry Coconut Dream</h1>
+            <h2>Einleitung</h2>
+            <p>Süß, fruchtig und wunderbar cremig: Der „Berry Coconut Dream“ erinnert an einen Sommerurlaub. Das
+                Zusammenspiel aus intensiven Wildbeeren, Kokosmilch und Ananassaft sorgt für ein samtiges Mundgefühl
+                ganz
+                ohne Sahne.</p>
+
+            <h2>Zutatenliste</h2>
+            <ul>
+                <li><data value="100">100</data> g gemischte Beeren (frisch oder tiefgekühlt)</li>
+                <li><data value="80">80</data> ml Ananassaft</li>
+                <li><data value="40">40</data> ml Kokosmilch (oder Kokoscreme)</li>
+                <li><data value="15">15</data> ml Limettensaft</li>
+                <li><data value="1">1</data> TL Honig oder Agavendicksaft</li>
+                <li><data value="4">4</data>–<data value="5">5</data> Eiswürfel</li>
+
+            </ul>
+
+            <h2>Zubereitung</h2>
+
+            <ol>
+                <li>Beeren, Ananassaft, Kokosmilch, Limettensaft und Süßungsmittel in einen Standmixer (oder Shaker)
+                    geben.
+                </li>
+                <li> Eiswürfel hinzufügen und alles für ca. 20–30 Sekunden kräftig durchmixen, bis eine homogene,
+                    schäumende
+                    Masse entsteht.</li>
+                <li>Den Mix durch ein feines Sieb in ein vorgekühltes Ballonglas gießen, um Kerne herauszufiltern.</li>
+                <li>Nach Wunsch mit einzelnen frischen Beeren auf einem Holzspieß garnieren und sofort servieren.</li>
+            </ol>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+
+
+
+
+
+</html>
