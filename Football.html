@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Tournament Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <section id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-ball" aria-hidden="true">⚽</div>
+      <p class="eyebrow">THE WORLD'S GAME</p>
+      <h1>FOOTBALL<br>SIMULATOR</h1>
+      <div class="loading-track">
+        <div class="loading-progress"></div>
+      </div>
+      <p class="loading-message">Preparing the tournament...</p>
+    </div>
+  </section>
+
+  <main id="app" class="app hidden">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-ball" aria-hidden="true">⚽</span>
+        <span id="brand-title">FOOTBALL<br><small>TOURNAMENT SIMULATOR</small></span>
+      </div>
+
+      <div class="topbar-actions">
+        <button id="choose-mode-button" class="secondary-button hidden" type="button">
+          Choose Mode
+        </button>
+        <button id="new-draw-button" class="secondary-button hidden" type="button">
+          New Draw
+        </button>
+      </div>
+    </header>
+
+    <section id="mode-view">
+      <div class="hero">
+        <p class="eyebrow">CHOOSE YOUR TOURNAMENT</p>
+        <h1>Two competitions. One champion.</h1>
+        <p>Select a mode to begin a fresh tournament with a randomized draw.</p>
+      </div>
+
+      <div class="mode-grid">
+        <button class="mode-card ucl-mode" data-mode="ucl" type="button">
+          <span class="mode-icon" aria-hidden="true">✦</span>
+          <span class="mode-kicker">EUROPEAN CLUB FOOTBALL</span>
+          <strong>UEFA Champions League</strong>
+          <span>32 clubs · 8 groups · Road to the final</span>
+          <span class="mode-cta">Start UCL →</span>
+        </button>
+
+        <button class="mode-card world-mode" data-mode="world" type="button">
+          <span class="mode-icon" aria-hidden="true">🌍</span>
+          <span class="mode-kicker">INTERNATIONAL FOOTBALL</span>
+          <strong>World Cup 2026</strong>
+          <span>48 countries · 12 groups · Road to glory</span>
+          <span class="mode-cta">Start World Cup →</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="tournament-view" class="hidden">
+      <section class="hero">
+        <p id="mode-kicker" class="eyebrow"></p>
+        <h1 id="mode-heading"></h1>
+        <p id="mode-description"></p>
+      </section>
+
+      <nav class="tabs" aria-label="Tournament pages">
+        <button id="groups-tab" class="tab-button active" type="button">
+          Group Draw
+        </button>
+        <button id="journey-tab" class="tab-button" type="button" disabled>
+          My Journey
+        </button>
+      </nav>
+
+      <section id="groups-view">
+        <div class="section-heading">
+          <div>
+            <p id="group-count-label" class="eyebrow"></p>
+            <h2>The Group Draw</h2>
+          </div>
+          <p class="muted">Select a team to begin its tournament journey.</p>
+        </div>
+        <div id="groups-grid" class="groups-grid"></div>
+      </section>
+
+      <section id="journey-view" class="hidden">
+        <div class="journey-heading">
+          <div>
+            <p class="eyebrow">YOUR CAMPAIGN</p>
+            <h2 id="journey-title">My Journey</h2>
+            <p id="journey-message" class="muted"></p>
+          </div>
+          <button id="back-to-groups-button" class="secondary-button" type="button">
+            All Groups
+          </button>
+        </div>
+
+        <div id="journey-stage-card" class="panel stage-panel"></div>
+
+        <div class="panel">
+          <h3 id="selected-group-title">Your Group</h3>
+          <div id="selected-group-table"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Group Matches</h3>
+          <div id="group-fixtures"></div>
+        </div>
+
+        <div class="panel">
+          <h3>Match Centre</h3>
+          <p id="match-centre-message" class="muted"></p>
+          <div id="live-match" class="live-match"></div>
+        </div>
+
+        <div id="knockout-card" class="panel hidden">
+          <h3>Tournament Bracket</h3>
+          <div id="knockout-bracket" class="knockout-bracket"></div>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>Football Tournament Simulator</span>
+      <span>Unofficial fan-made project</span>
+    </footer>
+  </main>
+
+  <dialog id="new-draw-dialog" class="game-dialog">
+    <div class="dialog-ball" aria-hidden="true">⚽</div>
+    <p class="eyebrow">NEW TOURNAMENT</p>
+    <h2 id="dialog-title">Start a new draw?</h2>
+    <p id="dialog-message">
+      This creates a fresh randomized tournament.
+    </p>
+    <div class="dialog-actions">
+      <button id="cancel-draw-button" class="secondary-button" type="button">
+        Cancel
+      </button>
+      <button id="confirm-draw-button" class="primary-button" type="button">
+        Start New Draw
+      </button>
+    </div>
+  </dialog>
+</body>
+</html>
